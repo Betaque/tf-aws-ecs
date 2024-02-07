@@ -2,6 +2,8 @@
 
 This module creates a Amazon Elastic Container Service (ECS) in AWS with customizable configurations.
 
+## Usage
+
 1. **Get Started:** Begin by creating the necessary files, provider.tf and main.tf, in your Terraform project directory.
 2. **Declare Provider:** Open provider.tf and declare the AWS provider. Ensure you've configured your AWS credentials and set the desired region.
 ```
@@ -10,6 +12,7 @@ provider "aws" {
 }
 ```
 3. **Add ECS Module and Define Variables:** Incorporate the ECS Module into your main.tf file, and set values for the variables defined in variables.tf.
+
 For Example:-
 ```
 module "ecs" {
@@ -54,3 +57,14 @@ module "ecs" {
   ecs_egress_rules_to_port    = [0]             # all
   ecs_egress_rules_protocols  = ["-1"]          # all protocol
 }
+```
+
+4. **Initialize Terraform:** Run the below terraform Command to initialize the project and download the module dependencies.
+```
+terraform init
+```
+
+5. **Apply Changes:** Execute the below terraform Command to create the VPC infrastructure based on the specified configurations.
+```
+terraform apply
+``` 
