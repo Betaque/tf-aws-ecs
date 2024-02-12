@@ -1,5 +1,12 @@
-variable "public_subnet_id" {}
-variable "vpc_id" {}
+variable "vpc_id" {
+    type = string
+    description = "The ID of the Virtual Private Cloud (VPC) where the ECS Cluster will be launched."
+}
+
+variable "subnet_id" {
+    type = string
+    description = "The VPC Subnet ID's to launch in"
+}
 
 variable "create_ecs_cluster" {
     type        = bool

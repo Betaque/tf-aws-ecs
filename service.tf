@@ -6,7 +6,7 @@ resource "aws_ecs_service" "ecs_service_name" {
   desired_count    = var.desired_count
   launch_type      = var.ecs_service_launch_type
   network_configuration {
-    subnets          = [var.public_subnet_id]
+    subnets          = [var.subnet_id]
     security_groups  = [aws_security_group.ecs_security_group.id]
     assign_public_ip = var.assign_public_ip
   }

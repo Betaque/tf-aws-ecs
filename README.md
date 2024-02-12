@@ -77,7 +77,7 @@ module "ecs" {
   })
   ## Security Group variables
   vpc_id                           = <YOUR_VPC_ID>
-  public_subnet_id                 = <YOUR_SUBNET_ID>
+  subnet_id                        = <YOUR_SUBNET_ID>
   ecs_security_group_name          = "sg"
   ecs_ingress_rules                = [80, 22]
   ecs_ingress_cidr_blocks          = ["0.0.0.0/0"]
